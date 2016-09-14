@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+    DocumentRoot /vagrant/api/web
+    ServerName api.log.dev
+
+    <Directory /vagrant/api/web>
+        AllowOverride All
+        Options -Indexes +FollowSymLinks
+        Require all granted
+    </Directory>
+</VirtualHost>
+
