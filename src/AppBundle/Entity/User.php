@@ -56,17 +56,7 @@ class User implements UserInterface
      * @Assert\Length(max="20")
      * @Assert\NotBlank()
      */
-    private $firstName;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(type="text", length=20)
-     *
-     * @Assert\Length(max="20")
-     * @Assert\NotBlank()
-     */
-    private $lastName;
+    private $username;
 
     /**
      * @var string
@@ -160,39 +150,20 @@ class User implements UserInterface
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
-    public function getFirstName()
+    public function getUsername()
     {
-        return $this->firstName;
+        return $this->username;
     }
 
     /**
-     * @param string $firstName
+     * @param string $username
      * @return $this
      */
-    public function setFirstName($firstName)
+    public function setUsername($username)
     {
-        $this->firstName = $firstName;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
-    }
-
-    /**
-     * @param string $lastName
-     * @return $this
-     */
-    public function setLastName($lastName)
-    {
-        $this->lastName = $lastName;
+        $this->username = $username;
 
         return $this;
     }
@@ -259,16 +230,6 @@ class User implements UserInterface
     public function getSalt()
     {
         return '123456789';
-    }
-
-    /**
-     * Returns the username used to authenticate the user.
-     *
-     * @return string The username
-     */
-    public function getUsername()
-    {
-        return $this->firstName;
     }
 
     /**

@@ -1,0 +1,13 @@
+AppBundle\Entity\User:
+  user.1:
+    createdAt: <(new \DateTime('2016-09-09 20:00:00'))>
+    role: 'ROLE_ADMIN'
+    username: 'Baptiste'
+    email: 'baptiste.costa@gmail.com'
+    password: '123456'
+  user.2:
+    createdAt: <(new \DateTime('2016-09-08 19:00:00'))>
+    role: 'ROLE_USER'
+    username: 'Pedro'
+    email: 'pedro@gmal.com'
+    password: '123456'
